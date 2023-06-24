@@ -77,7 +77,7 @@ public class UnethicalButlerPlugin extends Plugin
 			return;
 		}
 
-		int selectedItem = client.getSelectedItemID();
+		int selectedItem = client.getSelectedSpellItemId();
 		log.debug("Selected item id: {}", selectedItem);
 
 		LogType logType = config.logType();

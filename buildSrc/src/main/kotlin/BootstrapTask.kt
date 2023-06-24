@@ -75,7 +75,6 @@ open class BootstrapTask : DefaultTask() {
                         "id" to nameToId(it.project.extra.get("PluginName") as String),
                         "description" to it.project.extra.get("PluginDescription"),
                         "provider" to it.project.extra.get("PluginProvider"),
-                        "projectUrl" to it.project.extra.get("ProjectSupportUrl"),
                         "releases" to releases.toTypedArray()
                     ).jsonObject()
 

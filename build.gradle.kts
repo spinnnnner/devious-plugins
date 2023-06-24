@@ -9,13 +9,8 @@ buildscript {
 
 plugins {
     `java-library`
-    checkstyle
     kotlin("jvm") version "1.6.21"
 }
-
-project.extra["GithubUrl"] = "https://github.com/jbx5/devious-plugins-release"
-project.extra["GithubUserName"] = "jbx5"
-project.extra["GithubRepoName"] = "devious-plugins-release"
 
 apply<BootstrapPlugin>()
 
@@ -23,13 +18,11 @@ allprojects {
     group = "net.unethicalite"
 
     project.extra["PluginProvider"] = "unethicalite"
-    project.extra["ProjectSupportUrl"] = "https://discord.gg/WTvTbSPknJ"
     project.extra["PluginLicense"] = "3-Clause BSD License"
 
     apply<JavaPlugin>()
     apply(plugin = "java-library")
     apply(plugin = "kotlin")
-    apply(plugin = "checkstyle")
 
     repositories {
         mavenCentral()
@@ -66,6 +59,15 @@ allprojects {
             isReproducibleFileOrder = true
             dirMode = 493
             fileMode = 420
+        }
+
+        withType<Jar> {
+            doLast {
+                copy {
+                    from("./build/libs/")
+                    into("C:\\Users\\jerry\\Documents\\rs\\sus\\client-home\\.openosrs\\plugins")
+                }
+            }
         }
 
         compileKotlin {

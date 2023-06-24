@@ -23,9 +23,23 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-rootProject.name = "unethicalite-plugins"
+rootProject.name = "plugins"
 
-include("hoot-fighter")
+include("cw")
+include("tutorial-island")
+include("rats")
+include("salmonfishing")
+include("silver")
+include("treechop")
+include("treelight")
+include("guildonly")
+include("randomeventsolver")
+include("splash")
+include("chicken")
+include("shopbuyer")
+//include("noclogprep")
+
+//include("hoot-fighter")
 //include("hoot-tempoross")
 //include("hoot-blackjack")
 //include("hoot-trawler")
@@ -34,16 +48,15 @@ include("hoot-fighter")
 //include("hoot-chins")
 //include("hoot-notifier")
 //include("hoot-karambwanfisher")
-
-include("unethical-butler")
-include("unethical-kebab-buyer")
-include("unethical-autologin")
-include("unethical-oneclick")
-include("unethical-agility")
-include("unethical-prayer")
-include("unethical-explorer")
-include("unethical-chopper")
-include("unethical-zulrah")
+//include("unethical-butler")
+//include("unethical-kebab-buyer")
+//include("unethical-autologin")
+//include("unethical-oneclick")
+//include("unethical-agility")
+//include("unethical-prayer")
+//include("unethical-explorer")
+//include("unethical-chopper")
+//include("unethical-zulrah")
 //include("example-kotlin")
 
 for (project in rootProject.children) {
